@@ -431,26 +431,23 @@ body {
             }
 
             .comment-slider {
-                // border: 1px solid red;
+                border: 1px solid red;
                 overflow-x: hidden;
                 width: 700px;
                 // max-width: ;
                 .comment-slider-display {
                     display: flex;
                     align-items: center;
-                    min-height: 306px;;
                     padding: 1em;
                     flex-direction: rows;
                     .comment-card {
                         border-radius: 30px;
                         background: #ffffff;
-                        // box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
+                        box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
                         margin-right: 15px;
                         padding: 1em 1em 3em 1em;
-                        // border: 1px solid red;
-                        min-width: 295px;
-                        max-width: 320px;
-                        min-height: 220px;
+                        border: 1px solid red;
+                        width: 541px;
 
                         
 

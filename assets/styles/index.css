@@ -450,56 +450,52 @@ body .comment .comment-display {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid yellow;
+  border: 1px solid white;
 }
 
-body .comment .comment-display .comment-card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .comment .comment-display .comment-card-container .comment-logo {
-  border: 1px solid grey;
-  max-width: 300px;
+body .comment .comment-display .comment-logo {
+  background-color: aqua;
+  width: 300px;
   padding: 1em;
 }
 
-body .comment .comment-display .comment-card-container .comment-logo .comment-logo-details .h1 {
+body .comment .comment-display .comment-logo .comment-logo-details .h1 {
   color: #2d2d2d;
   font-size: 32px;
   font-weight: 400;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider {
-  border: 1px solid red;
-  overflow: hidden;
+body .comment .comment-display .comment-slider {
+  overflow-x: hidden;
   width: 700px;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display {
+body .comment .comment-display .comment-slider .comment-slider-display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 306px;
   padding: 1em;
-  width: 900px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: rows;
+          flex-direction: rows;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card {
   border-radius: 30px;
   background: #ffffff;
-  -webkit-box-shadow: 0px 16px 85px rgba(189, 223, 246, 0.45);
-          box-shadow: 0px 16px 85px rgba(189, 223, 246, 0.45);
   margin-right: 15px;
   padding: 1em 1em 3em 1em;
-  border: 1px solid red;
-  width: 901px;
+  min-width: 295px;
+  max-width: 320px;
+  min-height: 220px;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,7 +507,7 @@ body .comment .comment-display .comment-card-container .comment-slider .comment-
           justify-content: space-between;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,11 +516,11 @@ body .comment .comment-display .comment-card-container .comment-slider .comment-
           align-items: center;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-image-container {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-image-container {
   margin-right: 10px;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-image-container .comment-image-container {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-image-container .comment-image-container {
   background-color: #fafafa;
   border-radius: 50%;
   -webkit-box-sizing: border-box;
@@ -539,7 +535,7 @@ body .comment .comment-display .comment-card-container .comment-slider .comment-
   height: 50px;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-image-container .comment-image-container .comment-img {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-image-container .comment-image-container .comment-img {
   margin: 0;
   padding: 0;
   border: 0;
@@ -548,17 +544,17 @@ body .comment .comment-display .comment-card-container .comment-slider .comment-
   width: 100%;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-detail p {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-detail p {
   color: #2d2d2d;
   font-size: 14px;
   font-weight: 400;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-detail .comment-center {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-header-display .comment-profile-detail .comment-center {
   padding: 2px 0;
 }
 
-body .comment .comment-display .comment-card-container .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-number {
+body .comment .comment-display .comment-slider .comment-slider-display .comment-card .comment-card-header .comment-number {
   width: 40px;
   height: 40px;
   display: -webkit-box;
@@ -578,14 +574,12 @@ body .comment .comment-display .comment-card-container .comment-slider .comment-
 }
 
 body .comment .comment-display .comment-button {
-  max-width: 100px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-gap: 15px;
   margin-left: 5px;
-  border: 1px solid red;
 }
 
 body .comment .comment-display .comment-button button {

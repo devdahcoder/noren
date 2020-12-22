@@ -410,107 +410,111 @@ body {
     //comment style
 
     .comment {
+        background-color: grey;
         .comment-display {
             display: flex;
             align-items: center;
-            border: 1px solid white;
+            // border: 1px solid yellow;
+            // background-repeat: no-repeat, no-repeat, no-repeat;
+            // background-size: contain, contain, contain;
+            // background-position: center;
+            // padding: 3em 0;
+            .comment-card-container {
+                display: flex;
 
-            .comment-logo {
-                background-color: aqua;
-                width: 300px;
-                padding: 1em;
-                .comment-logo-details {
-                    .h1 {
-                        color: #2d2d2d;
-                        font-size: 32px;
-                        font-weight: 400;
-                        // line-height: 62px;
-                        // letter-spacing: -0.512px;
+                .comment-logo {
+                    // border: 1px solid grey;
+                    max-width: 300px;
+                    padding: 1em;
+                    .comment-logo-details {
+                        .h1 {
+                            color: #2d2d2d;
+                            font-size: 32px;
+                            font-weight: 400;
+                            // line-height: 62px;
+                            // letter-spacing: -0.512px;
+                        }
                     }
                 }
-            }
 
-            .comment-slider {
-                // border: 1px solid red;
-                overflow-x: hidden;
-                width: 700px;
-                // max-width: ;
-                .comment-slider-display {
-                    display: flex;
-                    align-items: center;
-                    min-height: 306px;;
-                    padding: 1em;
-                    flex-direction: rows;
-                    .comment-card {
-                        border-radius: 30px;
-                        background: #ffffff;
-                        // box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
-                        margin-right: 15px;
-                        padding: 1em 1em 3em 1em;
-                        // border: 1px solid red;
-                        min-width: 295px;
-                        max-width: 320px;
-                        min-height: 220px;
+                .comment-slider {
+                    // border: 1px solid red;
+                    overflow: hidden;
+                    width: 700px;
+                    // max-width: ;
+                    .comment-slider-display {
+                        display: flex;
+                        align-items: center;
+                        padding: 1em;
+                        width: 900px;
+                        .comment-card {
+                            border-radius: 30px;
+                            background: #ffffff;
+                            box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
+                            margin-right: 15px;
+                            padding: 1em 1em 3em 1em;
+                            // border: 1px solid red;
+                            // width: 901px;
+                            
 
-                        
-
-                        .comment-card-header {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            .comment-header-display {
+                            .comment-card-header {
                                 display: flex;
                                 align-items: center;
-                                .comment-profile-image-container {
-                                    margin-right: 10px;
-                                    .comment-image-container {
-                                        background-color: #fafafa;
-                                        border-radius: 50%;
-                                        box-sizing: border-box;
-                                        display: block;
-                                        flex: 0 0 auto;
-                                        overflow: hidden;
-                                        position: relative;
-                                        width: 50px;
-                                        height: 50px;
-                                        .comment-img {
-                                            margin: 0;
-                                            padding: 0;
-                                            border: 0;
-                                            // font: inherit;
-                                            vertical-align: baseline;
-                                            height: auto;
-                                            width: 100%;
-                                            // object-fit: cover;
+                                justify-content: space-between;
+                                .comment-header-display {
+                                    display: flex;
+                                    align-items: center;
+                                    .comment-profile-image-container {
+                                        margin-right: 10px;
+                                        .comment-image-container {
+                                            background-color: #fafafa;
+                                            border-radius: 50%;
+                                            box-sizing: border-box;
+                                            display: block;
+                                            flex: 0 0 auto;
+                                            overflow: hidden;
+                                            position: relative;
+                                            width: 50px;
+                                            height: 50px;
+                                            .comment-img {
+                                                margin: 0;
+                                                padding: 0;
+                                                border: 0;
+                                                // font: inherit;
+                                                vertical-align: baseline;
+                                                height: auto;
+                                                width: 100%;
+                                                // object-fit: cover;
+                                            }
+                                        }
+                                    }
+
+                                    .comment-profile-detail {
+                                        p {
+                                            color: #2d2d2d;
+                                            font-size: 14px;
+                                            font-weight: 400;
+  
+                                        }
+
+                                        .comment-center {
+                                            padding: 2px 0;
                                         }
                                     }
                                 }
 
-                                .comment-profile-detail {
-                                    p {
-                                        color: #2d2d2d;
-                                        font-size: 14px;
-                                        font-weight: 400;
-
-                                    }
-
-                                    .comment-center {
-                                        padding: 2px 0;
-                                    }
+                                .comment-number {
+                                    width: 40px;
+                                    height: 40px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background-color: rgb(233, 227, 227);
+                                    border-radius: 100vh;
+                                    color: #ffffff;
+                                    font-size: 14px;
+                                    font-weight: 400;
                                 }
-                            }
-
-                            .comment-number {
-                                width: 40px;
-                                height: 40px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                background-color: rgb(233, 227, 227);
-                                border-radius: 100vh;
-                                color: #ffffff;
-                                font-size: 14px;
-                                font-weight: 400;
                             }
                         }
                     }
@@ -518,10 +522,12 @@ body {
             }
 
             .comment-button {
+                max-width: 100px;
                 display: grid;
                 grid-template-rows: repeat(2, 1fr);
                 grid-gap: 15px;
                 margin-left: 5px;
+                // border: 1px solid red;
 
                 button {
                     border-radius: 100vh;

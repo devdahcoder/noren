@@ -410,6 +410,7 @@ body {
     //comment style
 
     .comment {
+        background-color: grey;
         .comment-display {
             display: flex;
             align-items: center;
@@ -417,8 +418,8 @@ body {
 
             .comment-logo {
                 background-color: aqua;
-                width: 300px;
-                padding: 1em;
+                flex-grow: 2;
+                // padding: 1em;
                 .comment-logo-details {
                     .h1 {
                         color: #2d2d2d;
@@ -431,27 +432,22 @@ body {
             }
 
             .comment-slider {
-                // border: 1px solid red;
-                overflow-x: hidden;
-                width: 700px;
+                border: 1px solid red;
+                overflow: hidden;
+                width: 600px;
                 // max-width: ;
                 .comment-slider-display {
                     display: flex;
                     align-items: center;
-                    min-height: 306px;;
                     padding: 1em;
-                    flex-direction: rows;
                     .comment-card {
                         border-radius: 30px;
                         background: #ffffff;
-                        // box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
+                        box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
                         margin-right: 15px;
                         padding: 1em 1em 3em 1em;
                         // border: 1px solid red;
-                        min-width: 295px;
-                        max-width: 320px;
-                        min-height: 220px;
-
+                        width: 901px;
                         
 
                         .comment-card-header {
@@ -518,10 +514,13 @@ body {
             }
 
             .comment-button {
+                flex: 1;
                 display: grid;
                 grid-template-rows: repeat(2, 1fr);
                 grid-gap: 15px;
                 margin-left: 5px;
+                border: 1px solid white;
+                background-color: black;
 
                 button {
                     border-radius: 100vh;
