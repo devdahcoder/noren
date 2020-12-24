@@ -56,7 +56,8 @@ body {
 
             nav {
                 ul {
-                    @extend %flex-display;
+                    display: flex;
+                    align-items: center;
                     list-style: none;
 
                     li {
@@ -78,7 +79,8 @@ body {
         .company-container {
             padding: 70px 0;
             .company-display {
-                @extend %flex-display;
+                display: flex;
+                align-items: center;
                 justify-content: $flex-space-between;
     
                 .display-text {
@@ -125,16 +127,18 @@ body {
         padding: 30px 0;
 
         .banner-display {
-            @extend %flex-display;
+            display: flex;
             justify-content: $flex-space-between;
+            align-items: center;
         }
     }
 
     .offers {
         padding: 7em 0;
         .offer-display {
-            @extend %flex-display;
-            justify-content: $flex-space-between;
+            display: flex;
+            align-items: center;
+            justify-content: $;
 
             .offer-container {
                 border-radius: 30px;
@@ -174,7 +178,7 @@ body {
         padding-top: 3em;
         .business-model-display {
             display: flex;
-            justify-content: $flex-space-between;
+            justify-content: space-between;
 
             .business-model-display-text {
                 .h1 {
@@ -195,7 +199,8 @@ body {
                     display: flex;
                     flex-direction: column;
                     .todo-item {
-                        @extend %flex-display;
+                        display: flex;
+                        align-items: center;
                         padding: 15px;
                         margin: 10px 0;
 
@@ -217,7 +222,8 @@ body {
                                 height: 50px;
                                 border-radius: 29px;
                                 background-color: #f4dda0;
-                                @extend %flex-display;
+                                display: flex;
+                                align-items: center;
                                 justify-content: center;
                                 color: #ffffff;
                             }
@@ -297,7 +303,8 @@ body {
 
                 .company-numbers {
                     opacity: 0.715053;
-                    @extend %flex-display;
+                    display: flex;
+                    align-items: center;
                     justify-content: center;
                     text-align: center;
                     color: #ffffff;
@@ -380,17 +387,20 @@ body {
                     padding: 1em;
 
                     .blog-date-time {
-                        @extend %flex-display;
-                        justify-content: $flex-space-between;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
 
                         .date-container, .time-container {
-                            @extend %flex-display;
+                            display: flex;
+                            align-items: center;
                         }
 
                         .date-img, .time-img {
                             width: 29px;
                             height: 29px;
-                            @extend %flex-display;
+                            display: flex;
+                            align-items: center;
                             justify-content: center;
                             vertical-align: middle;
                             background: rgba(160,223,244,0.36);
@@ -440,7 +450,9 @@ body {
         background-size: 30px, 20px;
         background-position: 100px 150px, 250px 50px;
         .comment-display {
-            @extend %flex-display;
+            display: flex;
+            align-items: center;
+            // border: 1px solid grey;
 
             .comment-logo {
                 width: 300px;
@@ -473,7 +485,8 @@ body {
                 width: 700px;
                 // max-width: ;
                 .comment-slider-display {
-                    @extend %flex-display;
+                    display: flex;
+                    align-items: center;
                     padding: 0 0 0 1em;
                     flex-direction: rows;
                     .comment-card {
@@ -492,9 +505,10 @@ body {
                         .comment-card-header {
                             display: flex;
                             align-items: center;
-                            justify-content: $flex-space-between;
+                            justify-content: space-between;
                             .comment-header-display {
-                                @extend %flex-display;
+                                display: flex;
+                                align-items: center;
                                 .comment-profile-image-container {
                                     margin-right: 10px;
                                     .comment-image-container {
@@ -537,7 +551,8 @@ body {
                             .comment-number {
                                 width: 40px;
                                 height: 40px;
-                                @extend %flex-display;
+                                display: flex;
+                                align-items: center;
                                 justify-content: center;
                                 background-color: rgb(233, 227, 227);
                                 border-radius: 100vh;
@@ -602,7 +617,7 @@ body {
             border-radius: 50px;
             background-color: #fcbc14;
             display: flex;
-            justify-content: $flex-space-between;
+            justify-content: space-between;
             padding: 4em 30px;
             background-image: url("../images/sideimage.svg");
             background-repeat: no-repeat;
@@ -661,8 +676,9 @@ body {
         background-color: #f7fafd;
         padding: 2em 0;
         .footer-display {
-            @extend %flex-display;
-            justify-content: $flex-space-between;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 }

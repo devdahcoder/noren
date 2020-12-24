@@ -661,7 +661,7 @@ body {
         background-color: #f7fafd;
         padding: 2em 0;
         .footer-display {
-            @extend %flex-display;
+            @extend %
             justify-content: $flex-space-between;
         }
     }

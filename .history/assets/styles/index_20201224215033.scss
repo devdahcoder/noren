@@ -661,7 +661,8 @@ body {
         background-color: #f7fafd;
         padding: 2em 0;
         .footer-display {
-            @extend %flex-display;
+            display: flex;
+            align-items: center;
             justify-content: $flex-space-between;
         }
     }
