@@ -255,6 +255,7 @@ body {
                 background-position: 500px 100px;
                 .h1 {
                     font-size: 60px;
+                    font-weight: 400;
                 }
 
                 .paragraph {
@@ -304,6 +305,7 @@ body {
                     border-radius: 89px;
                     background: #68def0;
                     font-size: 63px;
+                    font-weight: 400;
                     z-index: 3;
                     top: 0px;
                     left: 250px;
@@ -315,6 +317,7 @@ body {
                     border-radius: 70px;
                     background: #f990b6;
                     font-size: 45px;
+                    font-weight: 400;
                     z-index: 2;
                     bottom: 250px;
                     left: 50px
@@ -328,6 +331,7 @@ body {
                     border-radius: 89px;
                     background: #92bbfc;
                     font-size: 63px;
+                    font-weight: 400;
                     z-index: 1;
                     bottom: 290px;
                     left: 130px;
@@ -348,6 +352,7 @@ body {
             padding: 2em 0;
             .blog-h1 {
                 font-size: 42px;
+                font-weight: 400;
             }
         }
         .blog-display {
@@ -384,17 +389,20 @@ body {
 
                         .blog-date, .blog-time {
                             font-size: 14px;
+                            font-weight: 400;
                         }
                     }
 
                     .h1 {
                         font-size: 18px;
+                        font-weight: 400;
                         line-height: 2.8;
 
                     }
 
                     .p {
                         font-size: 14px;
+                        font-weight: 400;
                         line-height: 22px;
                     }
                 }
@@ -431,6 +439,7 @@ body {
                 .comment-logo-details {
                     .h1 {
                         font-size: 32px;
+                        font-weight: 400;
                         line-height: 62px;
                     }
 
@@ -500,6 +509,7 @@ body {
                                 .comment-profile-detail {
                                     p {
                                         font-size: 14px;
+                                        font-weight: 400;
 
                                     }
 
@@ -518,6 +528,7 @@ body {
                                 border-radius: 100vh;
                                 color: $color-white;
                                 font-size: 14px;
+                                font-weight: 400;
                             }
                         }
 
@@ -530,6 +541,7 @@ body {
                             max-width: 95%;
                             padding: 5px;
                             font-size: 14px;
+                            font-weight: 400;
                             line-height: 22px;
 
                             
@@ -586,6 +598,7 @@ body {
                 .h1 {
                     color: $color-white;
                     font-size: 32px;
+                    font-weight: 400;
                     line-height: 80px;
                 }
 
