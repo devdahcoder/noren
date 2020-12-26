@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat&family=Noto+Sans+SC&family=Nunito&family=Open+Sans&family=Poppins&family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
+
+
+// mixin is like a function that take an arguments and values
+// but instead of returning the value it sets it to the css property giving to it
+@mixin font-size($size) {
+    font-size: $size;
+}
+
+
+// background-color mixin
+
+@mixin background-color($color) {
+    background-color: $color;
+}
+
+// element with same with and height
+@mixin same-width-height($value) {
+    width: $value;
+    height: $value;
+}
+
+// display flex extend
+%flex-display {
+    display: flex;
+    align-items: center;
+}
+
+$flex-space-between: space-between;
+$color-white: #ffffff;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+  font-family: "Gilroy-Bold";
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Fira Code', monospace;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+
+    font-family: 'Fira Code', monospace;
+    // font-family: 'Poppins', sans-serif;
+    // font-family: 'Roboto Mono', monospace; 
+    // font-family: 'Montserrat', sans-serif; 
+    // font-family: 'Noto Sans SC', sans-serif; 
+    // font-family: 'Nunito', sans-serif; 
+    // font-family: 'Open Sans', sans-serif; 
+    // font-family: 'Source Sans Pro', sans-serif;
+    color: #2d2d2d;
+    font-weight: 400;
+    
+    .header-container {
+        background: #6246e4;
+        color: $color-white;
+        background-image: url("../images/sideimage.svg");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        header {
+            @extend %flex-display;
+            justify-content: $flex-space-between;
+            padding: 30px 0;
+
+            nav {
+                ul {
+                    @extend %flex-display;
+                    list-style: none;
+
+                    li {
+                        padding: 0 20px;
+                        display: inline-block;
+
+                        a {
+                            transition: all 0.3s ease 0s;
+                            color: $color-white;
+                            @include font-size(18px);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .company-container {
+            padding: 70px 0;
+            .company-display {
+                @extend %flex-display;
+                justify-content: $flex-space-between;
+    
+                .display-text {
+                    .h1 {
+                        @include font-size(50px);
+                        letter-spacing: -1.12px;
+                    }
+    
+                    .padding-text {
+                        padding: 20px 0;
+                        p {
+                            @include font-size(16px);
+                            line-height: 25px
+                        }
+                    }
+    
+                    .btn {
+                        border-radius: 100vh;
+                        padding: 12px 30px;
+                        border: none;
+                        outline: none;
+                        transition: all 0.3s ease 0s;
+                        font-family: 'Fira Code', monospace;
+                    }
+                }
+    
+                .display-image {
+                    background-image: url("../images/greendot.svg");
+                    background-repeat: no-repeat;
+                    background-size: 40px;
+                    background-position: left;
+                    img {
+                        width: 580px;
+                    }
+                }
+            }
+        }
+    }
+
+    .company-banner {
+        background: #f7fafd;
+        padding: 30px 0;
+
+        .banner-display {
+            @extend %flex-display;
+            justify-content: $flex-space-between;
+        }
+    }
+
+    .offers {
+        padding: 7em 0;
+        .offer-display {
+            @extend %flex-display;
+            justify-content: $flex-space-between;
+
+            .offer-container {
+                border-radius: 30px;
+                background: #f7fafd;
+                max-width: 260px;
+                padding: 25px 20px;
+                .offer-img {
+                    text-align: center;
+                    padding: 25px 0;
+                }
+
+                .details {
+                    
+                    .h1 {
+                        @include font-size(23px);
+                        line-height: 40px;
+                    }
+
+                    .p {
+                        @include font-size(14px);
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .business-model {
+        background-image: url("../images/sideimage.svg");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-top: 3em;
+        .business-model-display {
+            display: flex;
+            justify-content: $flex-space-between;
+
+            .business-model-display-text {
+                .h1 {
+                    @include font-size(50px);
+                    font-weight: 400;
+
+                }
+
+                .paragraph {
+                    @include font-size(18px);
+                    margin: 20px 0;
+                }
+
+                .todo-display {
+                    display: flex;
+                    flex-direction: column;
+                    .todo-item {
+                        @extend %flex-display;
+                        padding: 15px;
+                        margin: 10px 0;
+
+                        &:nth-child(2) {
+                            border-radius: 30px;
+                            background: $color-white;
+                            box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
+                        }
+                        
+                        .todo-img {
+                            width: 50px;
+                            height: 78px;
+                            border-radius: 29px;
+                            background-color: (#f9f8f8);
+                            margin-right: 30px;
+
+                            .todo-number {
+                                @include same-width-height(50px);
+                                border-radius: 29px;
+                                background-color: #f4dda0;
+                                @extend %flex-display;
+                                justify-content: center;
+                                color: $color-white;
+                            }
+
+                            .second {
+                                background-color: #bcd5fc;
+                            }
+
+                            .third {
+                                background-color: #fac2cf;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    //number or achievements style
+
+    .number {
+        background-image: url("../images/sideimage.svg"), url("../images/greendot.svg"), url("../images/greydot.svg");
+        background-position: left, 800px 10px, 65em 20px;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: contain, 40px, 30px;
+        padding: 4em 0;
+        margin-top: 8em;
+
+        .company-number-display {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            // align-items: center;
+
+            .company-number-text {
+                padding: 1em;
+                background-image: url("../images/greydot.svg");
+                background-repeat: no-repeat;
+                background-size: 20px;
+                background-position: 500px 100px;
+                .h1 {
+                    @include font-size(60px);
+                }
+
+                .paragraph {
+                    padding: 1em 0;
+                    @include font-size(18px);
+                }
+
+                .number-btn {
+                    border-radius: 100vh;
+                    padding: 12px 30px;
+                    border: none;
+                    outline: none;
+                    transition: all 0.3s ease 0s;
+                    font-family: 'Fira Code', monospace;
+                    background: #6246e4;
+                    color: $color-white;;
+                }
+            }
+
+
+
+            .company-number-num {
+                height: 500px;
+                background-image: url("../images/orangedot.svg"), url("../images/purpledot.svg"), url("../images/sideimage.svg");
+                background-position: 3em 20em, 28em 19em, center;
+                background-repeat: no-repeat, no-repeat, no-repeat;
+                background-size: 20px, 10px, 500px;
+                
+
+                .company-numbers {
+                    opacity: 0.715053;
+                    @extend %flex-display;
+                    justify-content: center;
+                    text-align: center;
+                    color: $color-white;
+                    padding: 10px;
+                    position: relative;
+                    line-height: 45px;
+
+                }
+
+                
+
+                .top {
+                    width: 252px;
+                    height: 251px;
+                    border-radius: 89px;
+                    background: #68def0;
+                    @include font-size(63px);
+                    z-index: 3;
+                    top: 0px;
+                    left: 250px;
+                }
+
+                .middle {
+                    @include same-width-height(198px);
+                    border-radius: 70px;
+                    background: #f990b6;
+                    @include font-size(45px);
+                    z-index: 2;
+                    bottom: 250px;
+                    left: 50px
+                    
+                    
+                    
+                }
+                .bottom {
+                    width: 252px;
+                    height: 251.15px;
+                    border-radius: 89px;
+                    background: #92bbfc;
+                    @include font-size(63px);
+                    z-index: 1;
+                    bottom: 290px;
+                    left: 130px;
+
+                }
+
+                
+            }
+        }
+    }
+
+
+    //blog style
+
+    .blog {
+        padding: 7em 0;
+        .blog-header {
+            padding: 2em 0;
+            .blog-h1 {
+                @include font-size(42px);
+            }
+        }
+        .blog-display {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 5.6em;
+            align-items: center;
+
+            .blog-card {
+                border-radius: 30px;
+                border: solid 1px #ececec;
+
+                .blog-details {
+                    padding: 1em;
+
+                    .blog-date-time {
+                        @extend %flex-display;
+                        justify-content: $flex-space-between;
+
+                        .date-container, .time-container {
+                            @extend %flex-display;
+                        }
+
+                        .date-img, .time-img {
+                            @include same-width-height(29px);
+                            @extend %flex-display;
+                            justify-content: center;
+                            vertical-align: middle;
+                            background: rgba(160,223,244,0.36);
+                            border-radius: 100vh;
+                            margin-right: 10px;
+                        }
+
+                        .blog-date, .blog-time {
+                            @include font-size(14px);
+                        }
+                    }
+
+                    .h1 {
+                        @include font-size(18px);
+                        line-height: 2.8;
+
+                    }
+
+                    .p {
+                        @include font-size(14px);
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+    //comment style
+
+    .comment {
+        padding: 6em 0;
+        background-image: url("../images/orangedot.svg"), url("../images/purpledot.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-size: 30px, 20px;
+        background-position: 100px 150px, 250px 50px;
+        .comment-display {
+            @extend %flex-display;
+
+            .comment-logo {
+                width: 300px;
+                padding: 1em;
+                background-image: url("../images/greydot.svg");
+                background-repeat: no-repeat;
+                background-size: 13px;
+                background-position: 185px 80px;
+                .comment-logo-details {
+                    .h1 {
+                        @include font-size(32px);
+                        line-height: 62px;
+                    }
+
+                    .p {
+                        @include font-size(14px);
+                        width: 90%;
+                        line-height: 22px;
+                    }
+
+                    
+                }
+            }
+
+            .comment-slider {
+                overflow-x: hidden;
+                width: 700px;
+                .comment-slider-display {
+                    @extend %flex-display;
+                    padding: 0 0 0 1em;
+                    flex-direction: rows;
+                    .comment-card {
+                        border-radius: 30px;
+                        background: $color-white;
+                        box-shadow: 0px 16px 85px rgba(189,223,246,0.45);
+                        margin-right: 15px;
+                        padding: 1em 1em 3em 1em;
+                        min-width: 295px;
+                        max-width: 320px;
+                        // min-height: 220px;
+
+                        
+
+                        .comment-card-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: $flex-space-between;
+                            .comment-header-display {
+                                @extend %flex-display;
+                                .comment-profile-image-container {
+                                    margin-right: 10px;
+                                    .comment-image-container {
+                                        background-color: #fafafa;
+                                        border-radius: 50%;
+                                        box-sizing: border-box;
+                                        display: block;
+                                        flex: 0 0 auto;
+                                        overflow: hidden;
+                                        position: relative;
+                                        @include same-width-height(50px);
+                                        .comment-img {
+                                            margin: 0;
+                                            padding: 0;
+                                            border: 0;
+                                            vertical-align: baseline;
+                                            height: auto;
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                .comment-profile-detail {
+                                    p {
+                                        @include font-size(14px);
+
+                                    }
+
+                                    .comment-center {
+                                        padding: 2px 0;
+                                    }
+                                }
+                            }
+
+                            .comment-number {
+                                @include same-width-height(40px);
+                                @extend %flex-display;
+                                justify-content: center;
+                                background-color: rgb(233, 227, 227);
+                                border-radius: 100vh;
+                                color: $color-white;
+                                @include font-size(14px);
+                            }
+                        }
+
+                        .comment-details {
+                            margin-top: 2em;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            width: 92%;
+                            max-width: 95%;
+                            padding: 5px;
+                            @include font-size(14px);
+                            line-height: 22px;
+
+                            
+                        }
+                    }
+                }
+            }
+
+            .comment-button {
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: 15px;
+                margin-left: 5px;
+
+                button {
+                    border-radius: 100vh;
+                    border: solid 1px #ededed;
+                    background: $color-white;
+                    padding: 6px;
+                    outline: none;
+                    cursor: pointer;
+
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    //Email form style
+
+    .mail {
+        padding: 12em 0 6em 0;
+        .mail-display {
+            position: relative;
+            border-radius: 50px;
+            background-color: #fcbc14;
+            display: flex;
+            justify-content: $flex-space-between;
+            padding: 4em 30px;
+            background-image: url("../images/sideimage.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            
+            .mail-form-container {
+                .h1 {
+                    color: $color-white;
+                    @include font-size(32px);
+                    line-height: 80px;
+                }
+
+                form {
+                    .form-text {
+                        background-color: rgba(255,255,255,0.22);
+                        border-radius: 100vh;
+                        padding: 1em 2em;
+                        font-family: 'Fira Code', monospace;
+                        outline: none;
+                        border: 1px solid rgba(255,255,255,0.22);
+                    }
+
+                    .form-btn {
+                        background: $color-white;
+                        border-radius: 100vh;
+                        font-family: 'Fira Code', monospace;
+                        padding: 1em 2em;
+                        outline: none;
+                        border: 1px solid $color-white;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .mail-box {
+                position: absolute;
+                right: 40px;
+                bottom: 50px;
+                background-image: url("../images/orangedot.svg"), url("../images/greydot.svg"), url("../images/purpledot.svg");
+                background-repeat: no-repeat, no-repeat;
+                background-size: 40px, 15px, 25px;
+                background-position: 0px 10px, 20px 100px, 80px 0px;
+            }
+        }
+    }
+
+
+
+
+
+    //footer style 
+
+    .footer {
+        background-color: #f7fafd;
+        padding: 2em 0;
+        .footer-display {
+            @extend %flex-display;
+            justify-content: $flex-space-between;
+        }
+    }
+}
