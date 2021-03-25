@@ -102,6 +102,7 @@ body {
             justify-content: $flex-space-between;
             padding: 30px 0;
 
+
             @include respond(small) {
                 .logo {
                     display: flex;
@@ -150,12 +151,17 @@ body {
                     top: 30px;
                     right: 24px;
                     border: none;
+                    display: block;
                     cursor: pointer;
                     background-color: none;
                     img {
                         height: 25px;
                     }
                 }
+            }
+
+            .mobile-nav {
+                display: none;
             }
 
             nav {
@@ -685,7 +691,7 @@ body {
                         min-width: 320px;
                         width: 100%;
                         // min-height: 220px;
-                        border: 1px solid red;
+                        // border: 1px solid red;
                         flex: 1;
 
                         
@@ -709,11 +715,7 @@ body {
                                         position: relative;
                                         @include same-width-height(50px);
                                         .comment-img {
-                                            margin: 0;
-                                            padding: 0;
-                                            border: 0;
-                                            vertical-align: baseline;
-                                            height: auto;
+                                            height: 100%;
                                             width: 100%;
                                         }
                                     }
